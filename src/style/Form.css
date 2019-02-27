@@ -1,0 +1,10 @@
+#main_div{
+    margin-top:50px;
+    width:400px;
+    height:400px;
+}
+.center-cols > .col {
+
+    display: inline-block; /* make blocks inline-block */
+   
+  }
