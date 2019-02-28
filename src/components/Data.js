@@ -1,15 +1,16 @@
 import React from "react";
 import "../style/Form.css";
+import {Button, Icon} from 'react-materialize';
 
 class Data extends React.Component {
     render(){
         return(
-          <div class="row center-cols">
-              <div class="col s12 m3">
-                <div class="card">
+          <div class="row center-cols" id="card_body">
+              <div class="col s10">
+                <div >
                   {this.props.recipe_data.map ((recipe)=>{
                     return(
-                        <div key={recipe.recipe_id}>
+                        <div class="card"  id="main" key={recipe.recipe_id}>
                           <div class="card-image"> 
                             <img src={recipe.image_url} alt={recipe.title}/>  
                           </div> 
@@ -17,7 +18,7 @@ class Data extends React.Component {
                             <p>{recipe.title}</p>
                           </div>
                           <div class="card-action">
-                            <a href="#">This is a link</a>
+                           <Button waves='light' > View Recipe</Button>
                           </div>
                         </div>
                     )
