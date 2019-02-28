@@ -15,7 +15,9 @@ class Data extends React.Component {
                             <img src={recipe.image_url} alt={recipe.title}/>  
                           </div> 
                           <div class="card-content"> 
-                            <p>{recipe.title}</p>
+                            <p>
+                            {recipe.title.length < 20 ? `${recipe.title}` : `${recipe.title.substring(0,25)}...`}                     
+                            </p>
                           </div>
                           <div class="card-action">
                            <Button waves='light' > View Recipe</Button>
